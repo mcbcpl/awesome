@@ -56,7 +56,7 @@
 
     window.customElements.define(AwesomeMeme.is, AwesomeMeme);*/
 
-      class AwesomeMeme {
+      class AwesomeMeme extends Polymer.Element {
       beforeRegister() {
         this.is = 'awesome-meme';
         this.properties = {
@@ -80,7 +80,7 @@
       attributeChanged() {}
     }
 
-    Polymer(AwesomeMeme);
+    window.customElements.define(AwesomeMeme.is, AwesomeMeme);
 
   </script>
 </dom-module>
