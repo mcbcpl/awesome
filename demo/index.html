@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>awesome-meme demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../awesome-meme.html">
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
+  </head>
+  <body>
+    <!--<div class="vertical-section-container centered">
+      <h3>Basic awesome-meme demo</h3>
+      <demo-snippet>
+        <template>
+          <awesome-meme></awesome-meme>
+        </template>
+      </demo-snippet>
+    </div>-->
+    <paper-material elevation="1">
+    <p class="paper-font-body2">This is another card.</p>
+    <!-- Adicione a linha abaixo -->
+    <awesome-meme top="ES2015" bottom="is awesome!"></awesome-meme>
+</paper-material>
+  </body>
+</html>

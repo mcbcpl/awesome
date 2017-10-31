@@ -1,0 +1,86 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="awesome-meme">
+  <template>
+    <style>
+    /* TODO: Adicionar CSS */
+      :host {
+        display: block;
+        background-image: url("/images/awesome.png");
+        width: 300px;
+        height: 300px;
+        position: relative;
+      }
+      .top, .bottom{
+        position: absolute;
+        font-size: 30px;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+      }
+      .top {
+        top: 20px;
+      }
+      .bottom {
+        bottom: 20px;
+      }
+    </style>
+
+    <!-- TODO: Adicionar o conteúdo HTML do template-->
+    <!--h2>Hello [[prop1]]!</h2-->
+    <div class="top">{{top}}</div>
+    <div class="bottom">{{bottom}}</div>
+  </template>
+
+  <script>
+    /* TODO: Criar definição do elemento Polymer usando ES2015 */
+    /**
+     * `awesome-meme`
+     * Gerador de memes
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    /*class AwesomeMeme extends Polymer.Element {
+      static get is() { return 'awesome-meme'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'awesome-meme'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(AwesomeMeme.is, AwesomeMeme);*/
+
+      class AwesomeMeme {
+      beforeRegister() {
+        this.is = 'awesome-meme';
+        this.properties = {
+          top: {
+            type: String,
+            value: ''
+          },
+          bottom: {
+            type: String,
+            value: ''
+          }
+        };
+      }
+      created() {}
+      ready() {
+        this.top = this.top.toUpperCase();
+        this.bottom = this.bottom.toUpperCase();
+      }
+      attached() {}
+      detached() {}
+      attributeChanged() {}
+    }
+
+    Polymer(AwesomeMeme);
+
+  </script>
+</dom-module>
